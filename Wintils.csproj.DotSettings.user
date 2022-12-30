@@ -1,0 +1,9 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/CodeInspection/WebPathMapping/IgnoredPaths/=BUTTON_002DICON_005FENABLED_002EPNG/@EntryIndexedValue">Button-Icon_enabled.png</s:String>
+	<s:String x:Key="/Default/CodeInspection/WebPathMapping/IgnoredPaths/=GPU_002DICON_002EPNG/@EntryIndexedValue">GPU-Icon.png</s:String>
+	<s:String x:Key="/Default/CodeInspection/WebPathMapping/IgnoredPaths/=KEYBOARD_002DICON_002EPNG/@EntryIndexedValue">Keyboard-Icon.png</s:String>
+	<s:String x:Key="/Default/CodeInspection/WebPathMapping/IgnoredPaths/=_002EKEYBOARD_002DICON_002EPNG/@EntryIndexedValue">.Keyboard-Icon.png</s:String>
+	<s:String x:Key="/Default/CodeInspection/WebPathMapping/PathsInCorrectCasing/=BUTTON_002DICON_005FENABLED_002EPNG/@EntryIndexedValue">Button-Icon_enabled.png</s:String>
+	<s:String x:Key="/Default/CodeInspection/WebPathMapping/PathsInCorrectCasing/=GPU_002DICON_002EPNG/@EntryIndexedValue">GPU-Icon.png</s:String>
+	<s:String x:Key="/Default/CodeInspection/WebPathMapping/PathsInCorrectCasing/=KEYBOARD_002DICON_002EPNG/@EntryIndexedValue">Keyboard-Icon.png</s:String>
+	<s:String x:Key="/Default/CodeInspection/WebPathMapping/PathsInCorrectCasing/=_002EKEYBOARD_002DICON_002EPNG/@EntryIndexedValue">.Keyboard-Icon.png</s:String></wpf:ResourceDictionary>

@@ -1,0 +1,121 @@
+﻿<Window x:Class="Wintils.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:tb="http://www.hardcodet.net/taskbar"
+        mc:Ignorable="d"
+        Title="Wintils" Icon="Reference/Icon.ico"
+        Background="Transparent"
+        UseLayoutRounding="True"
+        ShowActivated="False" ShowInTaskbar="False" Visibility="Hidden"
+        AllowsTransparency="True" WindowStyle="None"
+        Closing="MainWindow_OnClosing">
+
+    <Grid x:Name="AppMainWindow">
+        <tb:TaskbarIcon x:Name="TaskbarIcon"
+                        Visibility="Visible"
+                        ToolTipText="Wintils"
+                        IconSource="Reference/Mini-Icon.ico"
+                        PopupActivation="LeftClick"
+                        TrayPopupOpen="TaskbarIcon_OnTrayPopupOpen">
+            <tb:TaskbarIcon.TrayPopup>
+                <Border Background="DarkGray"
+                        CornerRadius="4"
+                        Height="240" Width="300">
+                    <Grid x:Name="AppBody" Height="220">
+                        <Grid x:Name="TipForClosing">
+                            <Label Content="Press CTRL+Q to Exit"
+                                   VerticalAlignment="Top" HorizontalAlignment="Center"
+                                   FontFamily="Arial Black" FontSize="12" />
+                        </Grid>
+                        <Border Background="WhiteSmoke" CornerRadius="4"
+                                Height="Auto" Width="280"
+                                VerticalAlignment="Top" HorizontalAlignment="Center"
+                                Margin="0, 30">
+                            <Grid x:Name="SystemManagingBody"
+                                  VerticalAlignment="Center" Height="Auto" Margin="10">
+                                <Border Background="Transparent" Width="260"
+                                        VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <Grid>
+                                        <Grid x:Name="CpuManagingItem"
+                                              HorizontalAlignment="Left" VerticalAlignment="Center">
+                                            <Image Source="/Reference/CPU-Icon.png"
+                                                   Style="{StaticResource ImageStyle}"
+                                                   HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                            <ProgressBar x:Name="CpuBar" Value="0" Maximum="1"
+                                                         Style="{DynamicResource RoundProgressBarStyle}"
+                                                         Width="80" Height="80"
+                                                         Foreground="Lime" Background="DarkGray" />
+                                        </Grid>
+
+                                        <Grid x:Name="RamManagingItem"
+                                              HorizontalAlignment="Center" VerticalAlignment="Center">
+                                            <Image Source="/Reference/RAM-Icon.png"
+                                                   Style="{StaticResource ImageStyle}"
+                                                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                   Margin="0,8" />
+                                            <ProgressBar x:Name="RamBar" Value="0" Maximum="1"
+                                                         Style="{DynamicResource RoundProgressBarStyle}"
+                                                         Width="80" Height="80"
+                                                         Foreground="Lime" Background="DarkGray" />
+                                        </Grid>
+
+                                        <Grid x:Name="MemoryManagingItem"
+                                              HorizontalAlignment="Right" VerticalAlignment="Center">
+                                            <Image Source="/Reference/MEMORY-Icon.png"
+                                                   Style="{StaticResource ImageStyle}"
+                                                   HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                            <ProgressBar x:Name="MemoryBar" Value="0" Maximum="1"
+                                                         Style="{DynamicResource RoundProgressBarStyle}"
+                                                         Width="80" Height="80"
+                                                         Foreground="Lime" Background="DarkGray" />
+                                        </Grid>
+                                    </Grid>
+                                </Border>
+                            </Grid>
+                        </Border>
+                        <Border Background="WhiteSmoke" CornerRadius="4"
+                                Height="Auto" Width="280"
+                                VerticalAlignment="Bottom">
+                            <Grid x:Name="FeaturesBody" VerticalAlignment="Bottom" Height="Auto">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="30" />
+                                    <RowDefinition Height="30" />
+                                </Grid.RowDefinitions>
+                                <Grid Row="0" x:Name="KeyboardCleaningMode" VerticalAlignment="Top">
+                                    <Label Content="Keyboard Cleaning"
+                                           HorizontalAlignment="Left" VerticalAlignment="Center"
+                                           FontWeight="Bold" FontFamily="Arial Black" FontSize="16" />
+                                    <Button x:Name="CleaningKeyboardModeButton"
+                                            Style="{StaticResource MyButtonStyle}"
+                                            HorizontalAlignment="Right" VerticalAlignment="Center"
+                                            PreviewMouseUp="CleaningKeyboardModeButton_Click"
+
+                                            Cursor="Hand">
+                                        <Image Source="Reference/Button-Icon_disabled.png" Stretch="Uniform"
+                                               RenderOptions.BitmapScalingMode="HighQuality" />
+                                    </Button>
+                                </Grid>
+
+                                <Grid Row="1" x:Name="WinAutoRun" VerticalAlignment="Top">
+                                    <Label Content="Windows Auto Run"
+                                           HorizontalAlignment="Left" VerticalAlignment="Center"
+                                           FontWeight="Bold" FontFamily="Arial Black" FontSize="16" />
+                                    <Button x:Name="WinAutoRunButton"
+                                            Style="{StaticResource MyButtonStyle}"
+                                            HorizontalAlignment="Right" VerticalAlignment="Center"
+                                            PreviewMouseUp="WinAutoRunButton_Click"
+                                            Cursor="Hand">
+                                        <Image Source="Reference/Button-Icon_disabled.png" Stretch="Uniform"
+                                               RenderOptions.BitmapScalingMode="HighQuality" />
+                                    </Button>
+                                </Grid>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </Border>
+            </tb:TaskbarIcon.TrayPopup>
+        </tb:TaskbarIcon>
+    </Grid>
+</Window>
